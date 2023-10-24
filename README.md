@@ -138,9 +138,9 @@ Often, the corrected solution is again smoothed with a couple of iterations (**p
 Applying these steps recursively on a whole hierarchy of grids forms the basis of a multigrid-cycle.
 Depending on the order the solver visits the different grids i.e. the call-graph, we refer to the cycles as either a V-cyle ($\mu = 1$) or W-cycle ($\mu = 2$).
 
-![algo](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/9cc0be10-f7f1-4c6b-a6fe-5a5d499dfad5)
+![algo](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/94828f59-1223-4934-8f18-957d4a995433)
 
-![multigrid_cycles](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/71623710-865a-4ef7-906f-80800f49a971)
+![multigrid_cycles](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/a9cdd5e6-00ea-44bb-93e9-59470dd9e14a)
 
 ## Prolongation and Restriction
 At its core the multigrid method relies on the two operations **prolongation and restriction**, to transfer the residual from fine to coarse, and the error from coarse to fine grids, respectively.
@@ -209,7 +209,7 @@ Incidentally, the restriction matrix $\mathbf{R}^{2h}_ {h}$ can be retrieved by 
     \end{bmatrix}.
 ```
 
-![1D_transfer](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/f5a8a8c4-6f52-47cc-9576-bd9be550e63b)
+![1D_transfer](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/a9f0f233-1e07-439b-8ac1-1532b2f7cc4e)
 
 ### Interpolation and restriction in 2D
 The prolongation in two dimension is realized by a *bilinear interpolation*:
@@ -229,4 +229,5 @@ In a similar manner to the one dimensional case, we can compute the restriction 
 ```
 Therefore, each value in $\Omega^{2h}$ is a weighted average of nine grid values of $\Omega^h$:
 
-![2D_transfer](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/4c2b08da-ed1d-47b2-85e9-49a1086c0272)
+![2D_transfer](https://github.com/nikolausrauch/geometric_multigrid/assets/13553309/fff8e16f-3481-4a72-ad96-123def9ca47e)
+
